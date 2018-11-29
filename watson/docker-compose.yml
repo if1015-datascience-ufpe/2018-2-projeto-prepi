@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    command: ["npm", "run", "devStart"]
+    container_name: min_web_api
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - .:/api
+    #   - /api/node_modules
+networks:
+  default:
